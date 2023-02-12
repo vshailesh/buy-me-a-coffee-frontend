@@ -189,7 +189,7 @@ export default function Home() {
         buyMeACoffee.off("NewMemo", onNewMemo);
       }
     };
-  }, []);
+  }, [getMemos, contractABI]);
 
   return (
     <div>
@@ -294,7 +294,7 @@ export default function Home() {
                   key={idx}
                   className="py-2 px-2 border-2 border-stone-900 rounded-md"
                 >
-                  <p className="font-bold">"{memo.message}"</p>
+                  <p className="font-bold">{memo.message}</p>
                   <p>
                     From: {memo.name} at {memo.timestamp.toString()}
                   </p>
